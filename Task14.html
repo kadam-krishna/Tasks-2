@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 14</title>
+  </head>
+  <style>
+    body {
+      display: grid;
+      place-content: center;
+    }
+    table {
+      background: pink;
+      background: linear-gradient(
+        0deg,
+        pink 12%,
+        rgba(240, 213, 191, 1) 74%,
+        rgba(244, 247, 196, 1) 100%
+      );
+      padding: 1rem 3rem;
+      width: 45rem;
+      height: 40rem;
+      margin: 0 auto;
+    }
+    label {
+      font-weight: bold;
+    }
+    input {
+      width: 70%;
+    }
+    button {
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: red;
+      
+      color: white;
+      font-weight: bold;
+    }
+    #button {
+        text-align: center;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">
+          <h1 style="text-align: center; color: blue">Registraion Form</h1>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="fname">First Name </label></td>
+        <td>
+          <input onkeyup="checkStrength()" type="text" name="fname" id="fname" required />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="lname">Last Name: </label></td>
+        <td>
+          <input onkeyup="checkStrength()" type="text" name="lname" id="lname" required />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="email">Email </label></td>
+        <td>
+          <input onkeyup="checkStrength()" type="email" name="email" id="email" required />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="password">Password: </label></td>
+        <td>
+          <input onkeyup="checkStrength()" type="password" name="password" id="password" required />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="repassword">Re-enter Password: </label></td>
+        <td>
+          <input onkeyup="checkStrength()" type="password" name="repassword" id="repassword" required />
+        </td>
+      </tr>
+      <tr>
+        <td><label  for="gender">Gender:</label></td>
+        <td>
+          <input style="width: fit-content" type="radio" name="gender" id="Female" checked/>Male
+          Male
+          <br />
+          <input style="width: fit-content" type="radio" name="gender" id="Female"/>Female
+        </td>
+      </tr>
+      <tr>
+        <td><label for="age">Age</label></td>
+        <td><input onkeyup="checkStrength1()" type="number" name="age" id="age" required /></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone Number: </label></td>
+        <td>
+          <input onkeyup="checkStrength()" type="tel" name="phone" id="phone" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="address">Address:</label>
+        </td>
+        <td>
+          <textarea onkeyup="checkStrength()"
+            name="address"
+            id="address"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="state">State</label></td>
+        <td><input onkeyup="checkStrength()" type="text" name="state" id="state" required /></td>
+      </tr>
+      <tr>
+        <td><label for="country">Country</label></td>
+        <td>
+          <select>
+            <option value="none">Choose your country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="lang">Language Known</label>
+        </td>
+        <td>
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="eng"
+          />
+          English
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="kannada"
+          />
+          Kannada
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="Hindi"
+          />
+          Hindi
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="Telugu"
+          />
+          Telugu
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="declaration"
+          />
+          Hereby I declare all the given details are true
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p style="text-align: right;">Log in to <a href="https://ethnus.com">Ethnus</a> website</p>
+        </td>
+      </tr>
+      <tr>
+        <td id="button" colspan="2">
+          <button>Register</button>
+        </td>
+      </tr>
+    </table>
+    <script>
+      function checkStrength()
+        {
+            let pwd = document.getElementById("i1").value;
+            if(pwd.length == 0)
+            {
+                document.getElementById("msg").innerHTML = "No strength";
+            }
+            else if(pwd.length < 5)
+            {
+                document.getElementById("msg").innerHTML = "Weak";
+            }
+            else{
+                document.getElementById("msg").innerHTML = "Strong";
+            }
+        }
+    </script>
+  </body>
+</html>

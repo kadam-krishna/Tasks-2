@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12</title>
+    <style>
+        body {
+            display: grid;
+            place-content: center;
+        }
+        .form {
+            width: 25rem;
+            min-height: 25rem;
+            min-width: fit-content;
+            background-color: #e7e3e3;  
+        }
+        .inf {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 3px;
+        }
+
+
+        a {
+            color: #0c7ff6;
+        }
+
+
+        .username input, .password input {
+            padding: 7px;
+            width: 15rem;
+            height: 3rem;
+            border: 1px solid whitesmoke;
+        }
+        .username, .password {
+            display: flex;
+            align-items: center;
+        }
+       
+        .primary {
+            border: none;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+            color: rgb(189, 187, 187);
+            background-color: #0c7ff6;
+            font-size: large;
+            text-align: center;
+            width: 100%;
+            border-radius: 5px;
+            width: 17rem;
+            height: 3rem;
+        }
+
+
+        .rememberforgot {
+            width: 17rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .register {
+            width: 25rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="inf">
+            <div class="logo">
+                <h1><i>Instagram</i></h1>
+            </div>
+            <div class="username">
+                <img src="https://img.icons8.com/?size=512&id=23265&format=png" height="30px">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="password">
+                <img src="https://img.icons8.com/?size=512&id=2862&format=png" height="30px">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <br>
+                <button class="primary">Log in</button>
+            <div class="rememberforgot">
+                <div class="remmbermeCB">
+                    <input type="checkbox" id="rememberme" name="rememberme" value="">
+                    <label for="rememberme">Remember me</label>
+                </div>
+                <div class="forgotpassword">
+                    <a href="https://www.instagram.com/accounts/password/reset/">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="register">
+        <p>Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up here</a></p>
+    </div>
+</body>
+</html>

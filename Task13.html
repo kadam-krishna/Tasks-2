@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 13</title>
+    <style>
+        #train {
+            position: relative;
+            animation: motion 1.5s infinite;
+            animation-play-state: paused;
+        }
+        @keyframes motion {
+            from {
+                left: -50px;
+            }
+            to {
+                left: 100%;
+            }
+        }
+    </style>
+    </head>
+    <div id="train"><img style="width: 250px;" src="https://cdn-icons-png.flaticon.com/512/2855/2855692.png" alt=""></div>
+    <div class="container" style="padding-top: 50x;">
+        <center>
+            <h1 style="color: blue;">Click the following button to handle animation</h1>
+            <button  onclick="play()">Play</button>
+            <button  onclick="pause()">Pause</button>
+        </center>
+    </div>
+
+
+    <script>
+        function play() {
+            document.getElementById("train").style.animationPlayState = "running";
+        }
+
+        function pause() {
+            document.getElementById("train").style.animationPlayState = "paused";
+        }
+    </script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+    <style>
+        body {
+            margin-top: 100px;
+            margin-left: 600px;
+            display:block;
+        }
+        .box {
+            border-radius: 3px;
+            padding: 12px;
+            min-width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="n1">1st Number  :</label>
+        <input type="number" name="n1" id='n1' placeholder="Enter the first number" required>
+        <br>
+        <label for="n2">2nd Number : </label>
+        <input type="number" name="n2" id="n2" placeholder="Enter the second number" required>
+        <br>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <p id="output">Result is : </p>
+    </div>
+
+
+    <script>
+        const n1Elem = document.getElementById('n1');
+        const n2Elem = document.getElementById('n2');
+        const outputElem = document.getElementById('output');
+
+
+        const multiply = ()=> {
+            const n1 = parseInt(n1Elem.value)
+            const n2 = parseInt(n2Elem.value)
+
+
+            let res = n1 * n2;
+            outputElem.innerText = "Result is : " +res;
+        }
+
+
+        const divide = ()=> {
+            const n1 = parseInt(n1Elem.value)
+            const n2 = parseInt(n2Elem.value)
+
+
+            let res = n1 / n2;
+            outputElem.innerText = "Result is : "+res;
+        }
+    </script>
+</body>
+</html>
